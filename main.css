@@ -1,0 +1,193 @@
+/*===============
+    GLOBAL
+  ===============*/
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+h1{
+    font-family: 'Calistoga', sans-serif;
+    font-size: 5rem;
+    display: inline;
+}
+h2{
+    font-family: 'Calistoga', sans-serif;
+    font-size: 5rem;
+}
+a{
+    text-decoration: none;
+}
+
+/*===============
+    LAYAOUT
+  ===============*/
+.entry,
+header{
+    padding: 3rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+background-color: #90d5ec;
+background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+
+}
+header h3{
+    font-size: 2rem;
+    position: relative;
+}
+header h3::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    top: -50px;
+    left: -100px;
+    right: -100px;
+    background-color: white;
+}
+.img-container{
+    flex-basis: 35%;
+    border-radius: 1rem ;
+    position: relative;
+    box-shadow: 0px 0px 0px grey;
+    background-position: center center;
+    background-size: cover;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.item1{
+    background-image: url('./photos/Dr-Stone.jpg');
+}
+.item2{
+    background-image: url('./photos/Kaguya-Sama.jpg');
+}
+.item3{
+    background-image: url('./photos/OddTaxi.jpg');
+}
+.item4{
+    background-image: url('./photos/FMA.jpg');
+}
+.item5{
+    background-image: url('./photos/silentVoice.jpg');
+}
+.img-container:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.info-container{
+    padding: 3rem;
+    flex-basis:65%;
+    position: relative;
+}
+.info-container > h2{
+    display: inline;
+}
+.tarjetas{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.tarjetas div{
+    position: relative;
+    width: 150px;
+    height: 240px;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+.tarjetas div:hover{
+    width: 300px;
+}
+.tarjetas div img{
+    width: 300px;
+    height: 240px;
+    object-fit: cover;
+    object-position: center center;
+}
+.tarjetas div b{
+    padding: 0 5px;
+    background: rgba(0,0,0,0.6);
+    color: #FFF;
+    font-size: 1.5em;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 1.5em;
+    text-decoration: none;
+    text-align: center;
+    transition: height 0.5s;
+}
+.tarjetas div:hover b{
+    height: 2em;
+}
+.tarjetas div::after{
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background-color: black;
+    opacity: 0.3;
+    transition: opacity ease-out 0.5s;
+}
+.tarjetas div:hover::after{
+    opacity: 0;
+}
+/*===============
+    INTERFACE
+  ===============*/
+.btn{
+    width: 12ch;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1.4rem;
+    color: black;
+    border: black solid 0.3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+    transition: color ease-in 0.5s;
+}
+
+.btn span{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: black;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+.btn:hover{
+    color:white
+}
+.btn:hover span {
+    transform: translateY(0) scale(2);
+}
+.btn span:nth-child(1){
+    --n:1;
+}
+.btn span:nth-child(2){
+    --n:2;
+}
+.btn span:nth-child(3){
+    --n:3;
+}
+.btn span:nth-child(4){
+    --n:4;
+}
