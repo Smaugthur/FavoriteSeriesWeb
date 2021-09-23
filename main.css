@@ -2,7 +2,6 @@
     GLOBAL
   ===============*/
 *{
-    scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
@@ -141,6 +140,39 @@ header h3::after{
 }
 .tarjetas div:hover::after{
     opacity: 0;
+}
+footer {
+    width: 100%;
+    position: relative;
+    color: white;
+}
+footer a{
+    min-height: 150px;
+    background-color: #004a91;
+    color: white;
+    display: block;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer > p{
+    margin: 0;
+    padding: 0.5em;
+    width: 100%;
+    background-color: #00178a;
+    text-align: center;
+}
+footer a p{
+   font-size: 2rem;
+   margin: 0;
+}
+footer a i{
+    font-size: 3rem;
+}
+footer > p{
+    font-weight: lighter;
 }
 /*===============
     INTERFACE
